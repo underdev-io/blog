@@ -1,7 +1,7 @@
 ---
-title: Another post
+title: Hello 2022
 description: "Empower your NuxtJS application with @nuxt/content module: write in a content/ directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a Git-based Headless CMS."
-date: "2021-12-28T22:12:03.284Z"
+date: "2022-01-01T22:12:03.284Z"
 ---
 
 Empower your NuxtJS application with `@nuxtjs/content` module: write in a `content/` directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a **Git-based Headless CMS**.

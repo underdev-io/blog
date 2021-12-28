@@ -1,34 +1,52 @@
 <template>
   <div>
-    <BlogHeader />
+    <blog-header />
 
-    <main class="blog-container">
-      <ul class="blog-posts">
-        <li v-for="post in posts" :key="post.slug" class="blog-posts__item">
-          <NuxtLink :to="post.path">
-            <h2>{{ post.title }}</h2>
-            <p>{{ post.description }}</p></NuxtLink
-          >
-        </li>
-      </ul>
-    </main>
+    <blog-posts :posts="posts" />
 
-    <BlogFooter />
+    <blog-footer />
   </div>
 </template>
 
 <script lang="ts">
 import BlogHeader from "~/components/BlogHeader.vue";
 import BlogFooter from "~/components/BlogFooter.vue";
+import BlogPosts from "~/components/BlogPosts.vue";
 
 export default {
   name: "IndexPage",
-  components: { BlogHeader, BlogFooter },
-  async asyncData({ $content }: any) {
-    const posts = await $content("posts").fetch();
+  components: { BlogHeader, BlogFooter, BlogPosts },
+  async asyncData({ $content, query, error }: any) {
+    const currentPage = parseInt(query.page);
+    const perPage = 1;
+    const posts = await $content("posts").sortBy("date", "desc").fetch();
+    const totalPosts = posts.length;
+    const lastPage = Math.ceil(totalPosts / perPage);
+    const lastPageCount =
+      totalPosts % perPage === 0 ? perPage : totalPosts % perPage;
+
+    const skipNumber = () => {
+      if (currentPage === 1) {
+        return 0;
+      }
+      if (currentPage === lastPage) {
+        return totalPosts - lastPageCount;
+      }
+      return (currentPage - 1) * perPage;
+    };
+    const paginatedPosts = await $content("posts")
+      .only(["title", "description", "slug", "date"])
+      .sortBy("date", "desc")
+      .limit(perPage)
+      .skip(skipNumber())
+      .fetch();
+
+    if (currentPage === 0 || !paginatedPosts.length) {
+      return error({ statusCode: 404, message: "No posts found!" });
+    }
 
     return {
-      posts,
+      posts: paginatedPosts,
     };
   },
   data() {
@@ -36,16 +54,11 @@ export default {
       posts: [],
     };
   },
+  head() {
+    return {
+      title: "Home | Underdev Blog",
+    };
+  },
   mounted() {},
 };
 </script>
-
-<style scoped>
-.blog-container {
-  padding: 0px 20px;
-}
-
-.blog-posts {
-  list-style: none;
-}
-</style>
