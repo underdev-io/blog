@@ -4,6 +4,8 @@
 
     <blog-posts :posts="posts" />
 
+    <blog-pagination :total="total" :per-page="perPage" />
+
     <blog-footer />
   </div>
 </template>
@@ -12,13 +14,14 @@
 import BlogHeader from "~/components/BlogHeader.vue";
 import BlogFooter from "~/components/BlogFooter.vue";
 import BlogPosts from "~/components/BlogPosts.vue";
+import BlogPagination from "~/components/BlogPagination.vue";
 
 export default {
   name: "IndexPage",
-  components: { BlogHeader, BlogFooter, BlogPosts },
+  components: { BlogHeader, BlogFooter, BlogPosts, BlogPagination },
   async asyncData({ $content, query, error }: any) {
     const currentPage = parseInt(query.page);
-    const perPage = 1;
+    const perPage = 10;
     const posts = await $content("posts").sortBy("date", "desc").fetch();
     const totalPosts = posts.length;
     const lastPage = Math.ceil(totalPosts / perPage);
@@ -47,11 +50,15 @@ export default {
 
     return {
       posts: paginatedPosts,
+      total: totalPosts,
+      perPage,
     };
   },
   data() {
     return {
       posts: [],
+      total: 0,
+      perPage: 0,
     };
   },
   head() {
@@ -59,6 +66,7 @@ export default {
       title: "Home | Underdev Blog",
     };
   },
+  watchQuery: ["page"],
   mounted() {},
 };
 </script>
