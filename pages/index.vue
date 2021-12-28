@@ -24,7 +24,7 @@ import BlogFooter from "~/components/BlogFooter.vue";
 export default {
   name: "IndexPage",
   components: { BlogHeader, BlogFooter },
-  async asyncData({ $content }) {
+  async asyncData({ $content }: any) {
     const posts = await $content("posts").fetch();
 
     return {
@@ -36,9 +36,7 @@ export default {
       posts: [],
     };
   },
-  mounted() {
-    console.log(this.posts);
-  },
+  mounted() {},
 };
 </script>
 
