@@ -11,14 +11,8 @@
 </template>
 
 <script lang="ts">
-import BlogHeader from "~/components/BlogHeader.vue";
-import BlogFooter from "~/components/BlogFooter.vue";
-import BlogPosts from "~/components/BlogPosts.vue";
-import BlogPagination from "~/components/BlogPagination.vue";
-
 export default {
   name: "IndexPage",
-  components: { BlogHeader, BlogFooter, BlogPosts, BlogPagination },
   async asyncData({ $content, query, error }: any) {
     const currentPage = parseInt(query.page);
     const perPage = 10;

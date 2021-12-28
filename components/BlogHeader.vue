@@ -29,6 +29,7 @@ export default {
   margin-bottom: 10px;
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 .blog-header__logo {

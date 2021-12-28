@@ -2,10 +2,8 @@
   <ul class="blog-posts">
     <li v-for="post in posts" :key="post.slug" class="blog-posts__item">
       <NuxtLink :to="post.path">
-        <time class="blog-posts__item__date">{{
-          friendlyDate(post.date)
-        }}</time>
-        <h2 class="blog-posts__item__title">{{ post.title }}</h2>
+        <post-date :date="post.date" />
+        <post-title :title="post.title" />
         <p class="blog-posts__item__text">{{ post.description }}</p></NuxtLink
       >
     </li>
@@ -13,21 +11,12 @@
 </template>
 
 <script lang="ts">
-import { format } from "date-fns";
-
 export default {
   name: "BlogPosts",
   props: {
     posts: {
       type: Array,
       default: () => [],
-    },
-  },
-  methods: {
-    friendlyDate(value: string) {
-      const parsedValue = new Date(value);
-
-      return format(parsedValue, "dd/MM/yyyy");
     },
   },
 };
@@ -55,18 +44,6 @@ export default {
 
 .blog-posts__item:last-child a {
   border-bottom: none;
-}
-
-.blog-posts__item__title {
-  font-size: 1.75rem;
-  margin-top: 0.25rem;
-}
-
-.blog-posts__item__date {
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
-  color: #222;
-  padding: 0px 5px;
 }
 
 .blog-posts__item__text {
