@@ -1,11 +1,7 @@
 <template>
   <header class="blog-header">
     <NuxtLink to="/" class="blog-header__link">
-      <img
-        class="blog-header__logo"
-        src="https://underdev.io/_next/static/image/components/Header/logo.8e2d2b891f7910ddec968e53255c0924.svg"
-        alt="Underdev"
-      />
+      <img class="blog-header__logo" src="/logo.svg" alt="Underdev" />
       <div class="blog-header__text">
         <h1>Underdev</h1>
         <p>crafting ideas</p>

@@ -1,7 +1,7 @@
 <template>
   <ul class="blog-posts">
     <li v-for="post in posts" :key="post.slug" class="blog-posts__item">
-      <NuxtLink :to="post.path">
+      <NuxtLink :to="`${post.path}/`">
         <post-date :date="post.date" />
         <post-title :title="post.title" />
         <p class="blog-posts__item__text">{{ post.description }}</p></NuxtLink
@@ -29,7 +29,7 @@ export default {
 
 .blog-posts__item a {
   display: block;
-  padding: 15px;
+  padding: 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   color: #222;
   text-decoration: none;

@@ -22,6 +22,16 @@ export default Vue.extend({
       post,
     };
   },
+  data() {
+    return {
+      post: { title: "" },
+    };
+  },
+  head(): any {
+    return {
+      title: `${this.post.title} | Underdev Blog`,
+    };
+  },
 });
 </script>
 
