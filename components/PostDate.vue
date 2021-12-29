@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import { format } from "date-fns";
+import { format, isValid } from "date-fns";
 
 export default {
   name: "PostDate",
@@ -17,7 +17,7 @@ export default {
     friendlyDate(value: string) {
       const parsedValue = new Date(value);
 
-      return format(parsedValue, "dd/MM/yyyy");
+      return isValid(parsedValue) ? format(parsedValue, "dd/MM/yyyy") : "";
     },
   },
 };

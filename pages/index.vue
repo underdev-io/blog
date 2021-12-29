@@ -16,7 +16,9 @@ export default {
   async asyncData({ $content, query, error }: any) {
     const currentPage = parseInt(query.page);
     const perPage = 10;
-    const posts = await $content("posts").sortBy("date", "desc").fetch();
+    const posts = await $content("posts", { deep: true })
+      .sortBy("date", "desc")
+      .fetch();
     const totalPosts = posts.length;
     const lastPage = Math.ceil(totalPosts / perPage);
     const lastPageCount =
@@ -31,7 +33,7 @@ export default {
       }
       return (currentPage - 1) * perPage;
     };
-    const paginatedPosts = await $content("posts")
+    const paginatedPosts = await $content("posts", { deep: true })
       .only(["title", "description", "slug", "date"])
       .sortBy("date", "desc")
       .limit(perPage)
