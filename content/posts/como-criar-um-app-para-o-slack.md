@@ -1,7 +1,7 @@
 ---
 title: "Como criar um app para o Slack"
 date: "2020-02-04T22:12:03.284Z"
-description: ""
+description: "No #1postperday de hoje, iremos aprender como criar um app interativo para o Slack, semelhante ao exemplo abaixo:"
 ---
 
 No #1postperday de hoje, iremos aprender como criar um app interativo para o Slack, semelhante ao exemplo abaixo:
