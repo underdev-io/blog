@@ -1,5 +1,10 @@
 <template>
-  <time class="blog-post-date">{{ friendlyDate(date) }}</time>
+  <div>
+    <time class="blog-post-item">{{ friendlyDate(date) }}</time>
+    <p v-if="author && author.name" class="blog-post-item">
+      {{ author.name }}
+    </p>
+  </div>
 </template>
 
 <script lang="ts">
@@ -11,6 +16,10 @@ export default {
     date: {
       type: String,
       default: () => "",
+    },
+    author: {
+      type: Object,
+      default: () => {},
     },
   },
   methods: {
@@ -24,10 +33,12 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.blog-post-date {
+.blog-post-item {
+  display: inline-block;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   color: #222;
   padding: 0px 5px;
+  margin-right: 0.5rem;
 }
 </style>

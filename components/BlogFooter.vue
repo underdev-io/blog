@@ -6,9 +6,15 @@
         Alegre, Brazil
       </p>
       <nav>
-        <a href="#">Github</a>
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
+        <a href="https://github.com/underdev-io" target="_blank"
+          ><v-icon scale="2" name="brands/github" style="margin-right: 10px"
+        /></a>
+        <a href="https://instagram.com/lhas_dev" target="_blank"
+          ><v-icon scale="2" name="brands/instagram" style="margin-right: 10px"
+        /></a>
+        <a href="https://www.linkedin.com/company/underdev-io/" target="_blank"
+          ><v-icon scale="2" name="brands/linkedin" style="margin-right: 10px"
+        /></a>
       </nav>
     </div>
   </footer>
@@ -35,7 +41,9 @@ export default {
   a {
     color: #222;
     font-weight: 400;
-    margin-right: 10px;
+    margin-top: 1rem;
+    display: inline-block;
+    margin-right: 0.5rem;
     transition: all 0.15s ease-in;
 
     &:hover {

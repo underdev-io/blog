@@ -3,10 +3,10 @@
     <blog-header />
 
     <article class="blog-post">
-      <post-date :date="post.date" />
+      <post-date :date="post.date" :author="author" />
       <post-title :title="post.title" />
       <nuxt-content :document="post" />
-      <post-author :post="post" />
+      <post-author :author="author" />
     </article>
     <blog-footer />
   </div>
@@ -15,6 +15,28 @@
 <script lang="ts">
 import Vue from "vue";
 
+const authors = [
+  {
+    username: "lhas",
+    name: "Luiz Almeida",
+    description:
+      "Desenvolvedor de software há 11 anos, especializado em construir soluções criativas para problemas do mundo real.",
+    image: "https://avatars.githubusercontent.com/u/41020086",
+    github: "https://www.github.com/lhas-dev/",
+    instagram: "https://www.instagram.com/lhas_dev/",
+    linkedin: "https://www.linkedin.com/in/luizhrqas/",
+  },
+  {
+    username: "pvinig",
+    name: "Vinicius Pretto",
+    description:
+      "Desenvolvedor back-end, trabalha com Node.js e as vezes com C++ por diversão no Arduino.",
+    image: "https://avatars.githubusercontent.com/u/83087064",
+    github: "https://github.com/pvinig",
+    instagram: "https://www.instagram.com/lhas_dev/",
+    linkedin: "https://www.linkedin.com/in/luizhrqas/",
+  },
+];
 export default Vue.extend({
   async asyncData({ $content, params }: any) {
     const post = await $content("posts", params.post).fetch();
@@ -25,13 +47,21 @@ export default Vue.extend({
   },
   data() {
     return {
-      post: { title: "" },
+      post: { title: "", author: "" },
     };
   },
   head(): any {
     return {
       title: `${this.post.title} | Underdev Blog`,
     };
+  },
+  computed: {
+    author(): any {
+      const value = this.post.author || "lhas";
+      const author = authors.find((item) => item.username === value);
+
+      return author;
+    },
   },
 });
 </script>
