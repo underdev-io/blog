@@ -12,9 +12,9 @@
 
 <script lang="ts">
 export default {
-  name: "IndexPage",
-  async asyncData({ $content, error }: any) {
-    const currentPage = 1;
+  name: "PostsPage",
+  async asyncData({ $content, params, error }: any) {
+    const currentPage = parseInt(params.page);
     const perPage = 10;
     const posts = await $content("posts", { deep: true })
       .sortBy("date", "desc")
@@ -40,7 +40,7 @@ export default {
       .skip(skipNumber())
       .fetch();
 
-    if (!paginatedPosts.length) {
+    if (currentPage === 0 || !paginatedPosts.length) {
       return error({ statusCode: 404, message: "No posts found!" });
     }
 

@@ -2,10 +2,7 @@
   <div class="blog-pagination">
     <nuxt-link
       :class="{ disabled: prevPage === currentPage }"
-      :to="{
-        name: 'index',
-        query: { page: prevPage },
-      }"
+      :to="`/posts/page/${prevPage}`"
     >
       <v-icon scale="1.5" name="chevron-left" style="margin-right: 10px" />
       Anterior
@@ -13,10 +10,7 @@
 
     <nuxt-link
       :class="{ disabled: nextPage === currentPage }"
-      :to="{
-        name: 'index',
-        query: { page: nextPage },
-      }"
+      :to="`/posts/page/${nextPage}`"
     >
       Próximo
       <v-icon scale="1.5" name="chevron-right" style="margin-left: 10px" />
@@ -44,8 +38,8 @@ export default Vue.extend({
       return Math.ceil(this.total / this.perPage);
     },
     currentPage(): number {
-      const page = this.$route.query.page
-        ? this.$route.query.page.toString()
+      const page = this.$route.params.page
+        ? this.$route.params.page.toString()
         : "";
       return parseInt(page) || 1;
     },
