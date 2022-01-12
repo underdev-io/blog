@@ -6,6 +6,7 @@
       <post-date :date="post.date" />
       <post-title :title="post.title" />
       <nuxt-content :document="post" />
+      <post-author :post="post" />
     </article>
     <blog-footer />
   </div>
@@ -38,6 +39,11 @@ export default Vue.extend({
 <style lang="postcss">
 .blog-post {
   padding: 20px;
+
+  @media (min-width: 992px) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 .nuxt-content-container {

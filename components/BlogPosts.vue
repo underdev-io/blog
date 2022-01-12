@@ -25,6 +25,11 @@ export default {
 <style lang="postcss" scoped>
 .blog-posts {
   list-style: none;
+
+  @media (min-width: 992px) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 .blog-posts__item a {

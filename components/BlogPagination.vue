@@ -7,6 +7,7 @@
         query: { page: prevPage },
       }"
     >
+      <v-icon scale="1.5" name="chevron-left" style="margin-right: 10px" />
       Anterior
     </nuxt-link>
 
@@ -18,6 +19,7 @@
       }"
     >
       Próximo
+      <v-icon scale="1.5" name="chevron-right" style="margin-left: 10px" />
     </nuxt-link>
   </div>
 </template>
@@ -62,6 +64,10 @@ export default Vue.extend({
 <style lang="postcss" scoped>
 .blog-pagination {
   display: flex;
+  @media (min-width: 992px) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
   a {
     display: flex;

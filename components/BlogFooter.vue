@@ -1,14 +1,16 @@
 <template>
   <footer class="blog-footer">
-    <p>
-      <strong>Underdev HQ</strong> Rua Portugal, 753, Higienópolis | Porto
-      Alegre, Brazil
-    </p>
-    <nav>
-      <a href="#">Github</a>
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
-    </nav>
+    <div class="blog-footer__container">
+      <p>
+        <strong>Underdev HQ</strong> Rua Portugal, 753, Higienópolis | Porto
+        Alegre, Brazil
+      </p>
+      <nav>
+        <a href="#">Github</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </nav>
+    </div>
   </footer>
 </template>
 
@@ -39,6 +41,14 @@ export default {
     &:hover {
       color: rgb(0, 233, 197);
     }
+  }
+}
+
+.blog-footer__container {
+  padding: 20px;
+  @media (min-width: 992px) {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 </style>

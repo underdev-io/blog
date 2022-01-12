@@ -18,7 +18,7 @@ export default {
   css: ["primeflex/primeflex.css", "@/static/global.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ["@/plugins/vue-awesome"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -60,7 +60,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     // https://github.com/primefaces/primevue/issues/844
-    transpile: ["primevue"],
+    transpile: ["primevue", /^vue-awesome/],
     postcss: {
       // Add plugin names as key and arguments as value
       // Install them before as dependencies with npm or yarn
