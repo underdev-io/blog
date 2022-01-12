@@ -1,6 +1,6 @@
 ---
 title: "NoSQL para Leigos, Parte 1"
-date: 2016-12-15 21:41:08
+date: "2016-12-15 21:41:08"
 description: "Estava eu, no meu cantinho, fazendo o que eu sei fazer de melhor: caçar bugs. Até que o CTO da empresa que trabalho me fez um pedido muito interessante:
 
 "Explique para o setor de Marketing como eles podem rodar consultas na nossa base de dados em MongoDB."

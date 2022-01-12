@@ -1,6 +1,6 @@
 ---
 title: "Usando Fragments No React"
-date: 2017-12-02T15:53:10-02:00
+date: "2017-12-02T15:53:10-02:00"
 description: "Fragments é um recurso novo, adicionado na última versão do React (v16.2). Este recurso permite que nós criemos uma listagem de sub-componentes, sem necessariamente adicionar um componente pai."
 tags: ["fragments", "react"]
 cover: /covers/usando-fragments-no-react.png

@@ -1,6 +1,6 @@
 ---
 title: Aplicando a Arquitetura Flux com Vue 2
-date: 2017-01-10 22:46:07
+date: "2017-01-10 22:46:07"
 description: "Depois de termos implementado um CRUD através do Vue 2, agora iremos profissionalizar a arquitetura do mesmo."
 tags: ["flux", "vuex", "vue"]
 cover: cover.png

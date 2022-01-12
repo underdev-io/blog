@@ -1,7 +1,7 @@
 ---
 title: Consumindo uma API RESTful com Ruby
 description: "Este é um assunto bem simples de se trabalhar quando falamos de Ruby"
-date: 2016-11-22 09:53:27
+date: "2016-11-22 09:53:27"
 tags: ["ruby", "api"]
 author: lhas
 ---

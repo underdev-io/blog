@@ -1,6 +1,6 @@
 ---
 title: Autenticação no Laravel 5 com models diferentes (Admin/User/etc)
-date: 2016-08-04 10:50:59
+date: "2016-08-04 10:50:59"
 description: "Passei recentemente por um problema que eu tinha certeza que era simples de se resolver mas nenhuma informação que eu encontrei na internet 
 disponível conseguia explicar claramente como resolvê-la. Nem mesmo na documentação oficial do Laravel."
 tags: ["autenticação", "laravel", "admin"]

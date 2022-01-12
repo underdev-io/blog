@@ -1,6 +1,6 @@
 ---
 title: Montando CRUD com Vue 2
-date: 2017-01-07 12:02:12
+date: "2017-01-07 12:02:12"
 description: "aprendar a montar um CRUD usando um Vue 2"
 tags: ["vue", "crud", "flux"]
 cover: /covers/montando-crud-com-vue-2.png

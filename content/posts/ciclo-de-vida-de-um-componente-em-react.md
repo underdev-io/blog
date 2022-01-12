@@ -4,7 +4,7 @@ tags: ["ciclo de vida", "react", "componente"]
 description: "componentes React. Especificamente, os seus ciclos de vida"
 cover: /covers/ciclo-de-vida-de-um-componente-em-react.png
 author: lhas
-date: 2017-11-28T14:20:47-02:00
+date: "2017-11-28T14:20:47-02:00"
 ---
 
 Olá a todos!

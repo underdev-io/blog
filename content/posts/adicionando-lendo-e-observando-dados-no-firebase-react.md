@@ -1,15 +1,13 @@
 ---
-title: 'Adicionando, Lendo e Observando dados no Firebase com React'
+title: "Adicionando, Lendo e Observando dados no Firebase com React"
 description: "Aprenda como trabalhar com o Realtime Database do Firebase. O Firebase é uma solução do Google para startups, que desejam entregar recursos em tempo real em tempo recorde."
 tags:
-
-- CRUD
-- firebase
-- react
-  cover: cover.png
-  author: lhas
-  date: 2018-03-18 18:26:12
-
+  - CRUD
+  - firebase
+  - react
+cover: cover.png
+author: lhas
+date: "2018-03-18 18:26:12"
 ---
 
 Aprenda como trabalhar com o Realtime Database do Firebase. O Firebase é uma solução do Google para startups, que desejam entregar recursos em tempo real em tempo recorde.

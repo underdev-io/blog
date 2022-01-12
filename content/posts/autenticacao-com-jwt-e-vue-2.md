@@ -1,6 +1,6 @@
 ---
 title: Autenticação com JWT e Vue 2
-date: 2016-12-11 12:30:40
+date: "2016-12-11 12:30:40"
 description: "Agora que iniciamos nosso projeto podemos fazer a próxima etapa que é inserir uma camada de Autenticação na nossa aplicação."
 ---
 

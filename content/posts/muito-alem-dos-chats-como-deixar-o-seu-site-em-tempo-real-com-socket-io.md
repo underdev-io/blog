@@ -1,6 +1,6 @@
 ---
 title: "Muito além dos chats: como deixar o seu site em tempo real com Socket.IO"
-date: 2016-08-06 10:17:46
+date: "2016-08-06 10:17:46"
 description: "Aplicações em tempo real estão mais acessíveis do que nunca. Hoje em dia, qualquer site que se preze tem algo neste esquema. Por um simples motivo: você consegue fazer uma conversão de acessos enorme com isto."
 tags: ["tempo real", "realtime", "socket.io", "angular"]
 cover: /covers/muito-alem-dos-chats-como-deixar-o-seu-site-em-tempo-real-com-socket-io.jpg

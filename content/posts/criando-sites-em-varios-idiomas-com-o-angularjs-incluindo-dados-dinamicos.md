@@ -1,6 +1,6 @@
 ---
 title: Criando sites em vários idiomas com o AngularJS (incluindo dados dinâmicos)
-date: 2016-08-05 02:54:13
+date: "2016-08-05 02:54:13"
 description: "Existem dezenas formas de resolver este problema hoje em dia, principalmente dependendo da tecnologia que o seu site funciona por trás"
 tags: ["i18n", "multi-idiomas", "internacionalização", "angularjs", "api"]
 cover: /covers/criando-sites-em-varios-idiomas-com-o-angularjs-incluindo-dados-dinamicos.jpg

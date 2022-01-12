@@ -1,6 +1,6 @@
 ---
 title: Escrevendo componentes com AngularJS no padrão do Google
-date: 2016-08-02 11:28:49
+date: "2016-08-02 11:28:49"
 description: "Depois de ter passado por um bloqueio criativo de duas semanas, resolvi escrever sobre um assunto que perpetuou minha cabeça nos últimos dias."
 tags: ["components", "angularjs", "google", "patterns"]
 cover: /covers/escrevendo-componentes-com-angularjs-no-padrao-do-google.jpg

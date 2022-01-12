@@ -2,7 +2,7 @@
 title: >-
   Usando Socket.IO em uma hospedagem compartilhada (como Locaweb, HostGator,
   etc)
-date: 2016-07-14 02:10:28
+date: "2016-07-14 02:10:28"
 description: "como trabalhar com o Socket.IO para transformar sua aplicação web em tempo real."
 tags:
   ["node.js", "socket.io", "hospedagem compartilhada", "vps", "digitalocean"]

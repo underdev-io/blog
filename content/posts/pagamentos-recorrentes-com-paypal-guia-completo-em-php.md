@@ -1,6 +1,6 @@
 ---
 title: 'Pagamentos Recorrentes com PayPal: Guia Completo! (em PHP)'
-date: 2016-11-21 01:42:32
+date: "2016-11-21 01:42:32"
 description: "resolvi escrever a respeito de um assunto que tirou o meu sono durante algumas noites.
 
 O motivo é simples. *"PayPal is a mess."* disse um comentário perdido de 2014 no blog deles. E é uma bagunça mesmo.
