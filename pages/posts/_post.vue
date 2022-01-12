@@ -47,12 +47,29 @@ export default Vue.extend({
   },
   data() {
     return {
-      post: { title: "", author: "" },
+      post: { title: "", author: "", description: "" },
     };
   },
   head(): any {
     return {
       title: `${this.post.title} | Underdev Blog`,
+      meta: [
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: `${this.post.title} | Underdev Blog`,
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: this.post.description,
+        },
+        {
+          hid: "og:image",
+          name: "og:image",
+          content: "https://blog.underdev.io/logo.svg",
+        },
+      ],
     };
   },
   computed: {
