@@ -1,12 +1,14 @@
 <template>
   <header class="blog-header">
-    <NuxtLink to="/" class="blog-header__link">
-      <img class="blog-header__logo" src="/logo.svg" alt="Underdev" />
-      <div class="blog-header__text">
-        <h1>Underdev</h1>
-        <p>crafting ideas</p>
-      </div>
-    </NuxtLink>
+    <div class="blog-header__container">
+      <NuxtLink to="/" class="blog-header__link">
+        <img class="blog-header__logo" src="/logo.svg" alt="Underdev" />
+        <div class="blog-header__text">
+          <h1>Underdev</h1>
+          <p>crafting ideas</p>
+        </div>
+      </NuxtLink>
+    </div>
   </header>
 </template>
 
@@ -52,6 +54,13 @@ export default {
     font-weight: 300;
     font-size: 1rem;
     line-height: 1;
+  }
+}
+
+.blog-header__container {
+  @media (min-width: 992px) {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 </style>

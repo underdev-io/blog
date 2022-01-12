@@ -2,8 +2,12 @@
   <footer class="blog-footer">
     <div class="blog-footer__container">
       <p>
-        <strong>Underdev HQ</strong> Rua Portugal, 753, Higienópolis | Porto
-        Alegre, Brazil
+        <strong
+          ><a href="https://underdev.io/" target="_blank"
+            >Underdev HQ</a
+          ></strong
+        >
+        Rua Portugal, 753, Higienópolis | Porto Alegre, Brazil
       </p>
       <nav>
         <a href="https://github.com/underdev-io" target="_blank"
@@ -38,6 +42,11 @@ export default {
     letter-spacing: 0.05rem;
   }
 
+  strong a {
+    font-weight: bold;
+    margin: 0;
+  }
+
   a {
     color: #222;
     font-weight: 400;
@@ -54,6 +63,7 @@ export default {
 
 .blog-footer__container {
   padding: 20px;
+
   @media (min-width: 992px) {
     max-width: 1200px;
     margin: 0 auto;
