@@ -5,6 +5,7 @@
     <article class="blog-post">
       <post-date :date="post.date" :author="author" />
       <post-title :title="post.title" />
+      <post-toc :toc="post.toc" />
       <nuxt-content :document="post" />
       <post-author :author="author" />
     </article>
