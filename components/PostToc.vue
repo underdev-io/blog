@@ -1,7 +1,7 @@
 <template>
   <ul class="post-toc">
     <li v-for="title in toc" :key="title.id">
-      <a id="title" @click="scroll(title)">
+      <a :href="`#{title.id}`" @click="(event) => scroll(title, event)">
         {{ title.text }}
       </a>
     </li>
@@ -19,11 +19,10 @@ export default {
   },
 
   methods: {
-    scroll(title: any) {
-      if (title)
-        document
-          .querySelector(`#${title.id}`)!
-          .scrollIntoView({ behavior: "smooth" });
+    scroll(title: any, event: any) {
+      event.preventDefault();
+      const el = document.querySelector(`#${title.id}`);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
     },
   },
 };
@@ -31,7 +30,7 @@ export default {
 
 <style lang="postcss" scoped>
 .post-toc {
-  margin-left: 30px;
+  margin-left: 1rem;
   font-weight: bold;
   font-size: 1rem;
   list-style-type: circle;
