@@ -18,6 +18,7 @@ export default {
         href: "https://fonts.googleapis.com/css2?family=Hind:wght@300;400;700&display=swap",
       },
     ],
+    script: [{ src: "/facebook.js" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

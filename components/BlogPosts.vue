@@ -1,7 +1,7 @@
 <template>
   <ul class="blog-posts">
     <li v-for="post in posts" :key="post.slug" class="blog-posts__item">
-      <NuxtLink :to="`/posts/${post.slug}`">
+      <NuxtLink :to="`/posts/${post.slug}/`">
         <post-date :date="post.date" />
         <post-title :title="post.title" />
         <p class="blog-posts__item__text">{{ post.description }}</p></NuxtLink

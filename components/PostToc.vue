@@ -2,7 +2,7 @@
   <div class="post-toc">
     <ul class="post-toc__list">
       <li v-for="title in toc" :key="title.id">
-        <a :href="`#{title.id}`" @click="(event) => scroll(title, event)">
+        <a :href="`#${title.id}`" @click="(event) => scroll(title, event)">
           {{ title.text }}
         </a>
       </li>
@@ -24,7 +24,15 @@ export default {
     scroll(title: any, event: any) {
       event.preventDefault();
       const el = document.querySelector(`#${title.id}`);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
+      const blogHeader = document.querySelector(".blog-header");
+
+      if (el && blogHeader) {
+        const yAxis =
+          el.getBoundingClientRect().top +
+          window.pageYOffset -
+          blogHeader.scrollHeight;
+        window.scrollTo({ top: yAxis, behavior: "smooth" });
+      }
     },
   },
 };

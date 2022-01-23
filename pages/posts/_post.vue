@@ -8,6 +8,13 @@
       <post-toc :toc="post.toc" />
       <nuxt-content :document="post" />
       <post-author :author="author" />
+
+      <div
+        class="fb-comments"
+        :data-href="`https://blog.underdev.io/${$nuxt.$route.path}`"
+        data-width="100%"
+        data-numposts="5"
+      ></div>
     </article>
     <blog-footer />
   </div>
@@ -81,12 +88,22 @@ export default Vue.extend({
       return author;
     },
   },
+  mounted() {
+    (window as any).FB.XFBML.parse();
+  },
 });
 </script>
 
 <style lang="postcss">
 .blog-post {
   padding: 20px;
+
+  img {
+    margin: 0 auto;
+    max-height: 300px;
+    display: block;
+    border-radius: 4px;
+  }
 
   @media (min-width: 992px) {
     max-width: 1200px;
@@ -97,12 +114,13 @@ export default Vue.extend({
 .nuxt-content-container {
   margin-top: 0.5rem;
 
-  h2 {
-    margin-top: 0.5rem;
+  h2,
+  h3 {
+    padding-top: 1rem;
   }
 
   p {
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
     font-size: 1rem;
   }
 
@@ -110,8 +128,13 @@ export default Vue.extend({
     color: rgb(2, 192, 163);
   }
 
-  .nuxt-content-highlight {
+  ul {
+    padding-left: 1rem;
     margin-top: 0.5rem;
+  }
+
+  .nuxt-content-highlight {
+    margin-top: 1rem;
   }
 
   .token.function {
