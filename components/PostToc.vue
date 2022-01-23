@@ -1,11 +1,13 @@
 <template>
-  <ul class="post-toc">
-    <li v-for="title in toc" :key="title.id">
-      <a :href="`#{title.id}`" @click="(event) => scroll(title, event)">
-        {{ title.text }}
-      </a>
-    </li>
-  </ul>
+  <div class="post-toc">
+    <ul class="post-toc__list">
+      <li v-for="title in toc" :key="title.id">
+        <a :href="`#{title.id}`" @click="(event) => scroll(title, event)">
+          {{ title.text }}
+        </a>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script lang="ts">
@@ -30,10 +32,32 @@ export default {
 
 <style lang="postcss" scoped>
 .post-toc {
-  margin-left: 1rem;
   font-weight: bold;
   font-size: 1rem;
-  list-style-type: circle;
   text-align: left;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: rgba(0, 0, 0, 0.03);
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  a {
+    color: #222;
+    margin-bottom: 0.15rem;
+    display: block;
+
+    &:hover {
+      color: rgb(0, 233, 197);
+    }
+  }
+}
+
+.post-toc__list {
+  list-style: none;
 }
 </style>
