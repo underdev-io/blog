@@ -65,6 +65,10 @@ export default {
     },
   },
 
+  sitemap: {
+    hostname: "https://blog.underdev.io",
+  },
+
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 
