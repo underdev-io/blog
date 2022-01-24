@@ -25,7 +25,7 @@ export default {
   css: ["primeflex/primeflex.css", "@/static/global.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["@/plugins/vue-awesome"],
+  plugins: ["@/plugins/vue-awesome", "@/plugins/gtag"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
