@@ -59,9 +59,13 @@ export default {
   },
   head() {
     return {
-      title: "Home | Underdev Blog",
+      title: "Underdev Blog | Programação + Conhecimento",
       meta: [
-        { hid: "og:title", name: "og:title", content: "Home | Underdev Blog" },
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: "Underdev Blog | Programação + Conhecimento",
+        },
         {
           hid: "og:description",
           name: "og:description",
@@ -71,7 +75,7 @@ export default {
         {
           hid: "og:image",
           name: "og:image",
-          content: "https://blog.underdev.io/logo.svg",
+          content: "https://blog.underdev.io/og_image.png",
         },
       ],
     };

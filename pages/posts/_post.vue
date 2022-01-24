@@ -75,7 +75,7 @@ export default Vue.extend({
         {
           hid: "og:image",
           name: "og:image",
-          content: "https://blog.underdev.io/logo.svg",
+          content: "https://blog.underdev.io/og_image.png",
         },
       ],
     };
