@@ -1,12 +1,12 @@
 <template>
   <div class="post-toc">
-    <ul class="post-toc__list">
+    <ol class="post-toc__list">
       <li v-for="title in toc" :key="title.id">
         <a :href="`#${title.id}`" @click="(event) => scroll(title, event)">
           {{ title.text }}
         </a>
       </li>
-    </ul>
+    </ol>
   </div>
 </template>
 
@@ -46,8 +46,8 @@ export default {
   padding: 1rem 1.5rem;
   border-radius: 4px;
   display: inline-block;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   background: rgba(0, 0, 0, 0.03);
 
   h2 {
@@ -66,6 +66,6 @@ export default {
 }
 
 .post-toc__list {
-  list-style: none;
+  padding-left: 1rem;
 }
 </style>

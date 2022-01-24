@@ -82,7 +82,8 @@ export default Vue.extend({
     }
 
     &.disabled {
-      opacity: 0.5;
+      background: rgba(0, 0, 0, 0.02);
+      color: rgba(0, 0, 0, 0.7);
       cursor: not-allowed;
       &:hover {
         font-weight: 300;

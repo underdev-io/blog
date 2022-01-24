@@ -73,6 +73,11 @@ export default Vue.extend({
           content: this.post.description,
         },
         {
+          hid: "description",
+          name: "description",
+          content: this.post.description,
+        },
+        {
           hid: "og:image",
           name: "og:image",
           content: "https://blog.underdev.io/og_image.png",

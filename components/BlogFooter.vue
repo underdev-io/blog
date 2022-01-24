@@ -3,20 +3,35 @@
     <div class="blog-footer__container">
       <p>
         <strong
-          ><a href="https://underdev.io/" target="_blank"
+          ><a
+            href="https://underdev.io/"
+            rel="noopener noreferrer"
+            target="_blank"
             >Underdev HQ</a
           ></strong
         >
         Rua Portugal, 753, Higienópolis | Porto Alegre, Brazil
       </p>
       <nav>
-        <a href="https://github.com/underdev-io" target="_blank"
+        <a
+          href="https://github.com/underdev-io"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Nosso perfil no Github"
           ><v-icon scale="2" name="brands/github" style="margin-right: 10px"
         /></a>
-        <a href="https://instagram.com/lhas_dev" target="_blank"
+        <a
+          href="https://instagram.com/lhas_dev"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Nosso perfil no Instagram"
           ><v-icon scale="2" name="brands/instagram" style="margin-right: 10px"
         /></a>
-        <a href="https://www.linkedin.com/company/underdev-io/" target="_blank"
+        <a
+          href="https://www.linkedin.com/company/underdev-io/"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Nosso perfil no Linkedin"
           ><v-icon scale="2" name="brands/linkedin" style="margin-right: 10px"
         /></a>
       </nav>

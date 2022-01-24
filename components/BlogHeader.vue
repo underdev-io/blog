@@ -2,7 +2,13 @@
   <header class="blog-header">
     <div class="blog-header__container">
       <NuxtLink to="/" class="blog-header__link">
-        <img class="blog-header__logo" src="/logo.svg" alt="Underdev" />
+        <img
+          class="blog-header__logo"
+          src="/logo.svg"
+          width="41px"
+          height="40px"
+          alt="Underdev"
+        />
         <div class="blog-header__text">
           <h1>Underdev</h1>
           <p>crafting ideas</p>

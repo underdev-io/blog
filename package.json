@@ -2,6 +2,7 @@
   "name": "underdev-blog",
   "version": "1.0.0",
   "private": true,
+  "author": "Luiz Almeida <luizhrqas@gmail.com>",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
