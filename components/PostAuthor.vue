@@ -4,7 +4,7 @@
     <div class="post-author__content">
       <img class="post-author__image" :src="author.image" />
       <div class="post-author__text">
-        <strong>{{ author.name }}</strong>
+        <strong itemprop="author">{{ author.name }}</strong>
         <p>
           {{ author.description }}
         </p>

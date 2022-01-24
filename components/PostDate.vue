@@ -1,6 +1,8 @@
 <template>
   <div>
-    <time class="blog-post-item">{{ friendlyDate(date) }}</time>
+    <time itemprop="datePublished" class="blog-post-item">{{
+      friendlyDate(date)
+    }}</time>
     <p v-if="author && author.name" class="blog-post-item">
       {{ author.name }}
     </p>
